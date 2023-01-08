@@ -1,7 +1,9 @@
+# C2C Chatbot project by GregS
 import random
 
-#Simple chat program
-#Responds randomly with one of four preprogrammed responses
+# Simple chat program
+# Responds randomly with one of four preprogrammed responses
+# TODO Add more questions abd related processing functions.
 
 def generate_response(user_input):
   responses = [
