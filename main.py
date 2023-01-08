@@ -5,6 +5,11 @@ import random
 # Responds randomly with one of four preprogrammed responses
 # TODO Add more questions abd related processing functions.
 
+# This function plays guess the animal
+def play_animal_game():
+  print('TODO-Here is where we will play guess the animal.')
+
+# This function generates a random response from a list of responses.
 def generate_response(user_input):
   responses = [
     "How interesting!",
@@ -21,7 +26,13 @@ def init_chat():
 
   while user_input != quit_character:
     #Ask the user for more input, then use that in your response
-    user_input = input(generate_response(user_input) + "\n")
+    if "animal" in user_input:
+      play_animal_game()
+      # Get a new response from the user
+      user_input = input("What else do you want to talk about?\n")
+    else:
+      user_input = input(generate_response(user_input) + "\n")
 
 if __name__ == "__main__":
   init_chat()
+  print('Goodbye and thanks for talking.')
